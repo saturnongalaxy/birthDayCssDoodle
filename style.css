@@ -1,0 +1,287 @@
+:root {
+  --color-bg: #abcce2;
+  --color-text: #ab3636;
+  --color-cherry: #f4b8c2;
+  --color2: #988d7b;
+  --color-frost: #ead2cc;
+  --color-cake: #c49896;
+  --color-flame: #f7ea87;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: "Single day", "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.cake {
+  position: relative;
+  width: 200px;
+  height: 110px;
+  background: var(--color-cake);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.down {
+  margin-left: -25px;
+  margin-top: 1px;
+  width: 250px;
+  height: 14px;
+  border-radius: 5px;
+  background-color: var(--color-frost);
+}
+
+.cake__frost {
+  width: 200px;
+  height: 40px;
+  background: var(--color-frost);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cake__drip {
+  background: var(--color-frost);
+  border-radius: 10px;
+  position: absolute;
+  animation: slide 1s;
+  animation-delay: 2s;
+}
+
+.cake__drip1 {
+  width: 12px;
+  height: 35px;
+  top: 30px;
+  left: 15px;
+}
+
+.cake__drip2 {
+  width: 14px;
+  height: 25px;
+  top: 30px;
+  left: 30px;
+}
+
+.cake__drip3 {
+  width: 10px;
+  height: 40px;
+  top: 30px;
+  left: 50px;
+}
+.cake__drip8 {
+  width: 20px;
+  height: 25px;
+  top: 30px;
+  left: 70px;
+}
+
+.cake__drip4 {
+  width: 12px;
+  height: 35px;
+  top: 30px;
+  left: 160px;
+}
+
+.cake__drip5 {
+  width: 12px;
+  height: 30px;
+  top: 30px;
+  left: 90px;
+}
+
+.cake__drip6 {
+  width: 15px;
+  height: 35px;
+  top: 30px;
+  left: 120px;
+}
+
+.cake__drip7 {
+  width: 15px;
+  height: 20px;
+  top: 30px;
+  left: 135px;
+}
+
+.cake__layer {
+  width: 200px;
+  height: 10px;
+  background: var(--color-frost);
+  top: 76px;
+  position: absolute;
+}
+
+.cake__numbers {
+  position: absolute;
+  top: -30px;
+  left: 65px;
+}
+
+.cake__numbers__stick1 {
+  height: 27px;
+  width: 14px;
+  background: var(--color2);
+  position: absolute;
+  top: 5px;
+  left: 30px;
+}
+
+.cake__numbers__flame1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  border: 7px solid var(--color-flame);
+  left: 30px;
+  top: -20px;
+  animation: flame 0.5s infinite;
+  color: var(--color-flame);
+}
+.cake__numbers__flame1 i {
+  color: var(--color-flame);
+}
+
+.cherry1 {
+  width: 18px;
+  height: 18px;
+  background: var(--color-cherry);
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-top: -55px;
+}
+
+.cherry2 {
+  width: 20px;
+  height: 20px;
+  background: var(--color-cherry);
+  border-radius: 50%;
+  margin-left: 170px;
+  margin-top: -23px;
+}
+
+.cherry3 {
+  width: 20px;
+  height: 20px;
+  background: var(--color-cherry);
+  border-radius: 50%;
+  margin-left: 120px;
+  margin-top: 90px;
+}
+
+.cherry4 {
+  width: 20px;
+  height: 20px;
+  background: var(--color-cherry);
+  border-radius: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+/*******/
+@-webkit-keyframes slide {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 30px;
+  }
+}
+@keyframes slide {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 30px;
+  }
+}
+@keyframes flame {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes flame {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*********/
+.bounce {
+  height: 15rem;
+  overflow: hidden;
+  position: relative;
+  color: #333;
+  border: none;
+  margin-top: 2rem;
+}
+
+.bounce p {
+  color: var(--color-text);
+  letter-spacing: 10px;
+  font-size: 3rem;
+  width: 500px;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  -moz-transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  -moz-animation: bouncing-text 5s linear infinite alternate;
+  -webkit-animation: bouncing-text 5s linear infinite alternate;
+  animation: bouncing-text 10s linear infinite alternate;
+}
+
+@-moz-keyframes bouncing-text {
+  0% {
+    -moz-transform: translateX(50%);
+  }
+  100% {
+    -moz-transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes bouncing-text {
+  0% {
+    -webkit-transform: translateX(50%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+  }
+}
+
+@keyframes bouncing-text {
+  0% {
+    -moz-transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+  100% {
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}

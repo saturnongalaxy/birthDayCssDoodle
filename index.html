@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>birthday</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.38.4/css-doodle.min.js"></script>
+  </head>
+  <body>
+    <css-doodle grid="5" id="doodle" click-to-update style="position: fixed">
+      :doodle{ @grid: 20*20 /100vmax; grid-gap:20px; background:transparent; }
+      transform: scale(@rand(0.1,0.6)); translate3d(@r(50px),@r(100px),0);
+      background:hsla(@r(360),85%,@r(85%,90%),@r(0.9)); border-radius(@r(50px));
+      @size: @r(20px, 100px); animation: test infinite @r(10s, 150s) linear;
+      @keyframes test { 0% { transform: translate3d(0, 0, 0); } 50% { transform:
+      translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0); } 100% { transform:
+      translate3d(0, 0, 0); } }
+    </css-doodle>
+
+    <div class="wrap">
+      <div class="cake">
+        <div class="cake__frost">
+          <div class="cake__drip cake__drip1"></div>
+          <div class="cake__drip cake__drip2"></div>
+          <div class="cake__drip cake__drip3"></div>
+          <div class="cake__drip cake__drip8"></div>
+          <div class="cake__drip cake__drip4"></div>
+          <div class="cake__drip cake__drip5"></div>
+          <div class="cake__drip cake__drip6"></div>
+          <div class="cake__drip cake__drip7"></div>
+        </div>
+        <div class="cake__layer"></div>
+        <div class="cake__numbers">
+          <div class="cake__numbers__stick1"></div>
+          <div class="cake__numbers__flame1"></div>
+        </div>
+        <div class="cherry1"></div>
+        <div class="cherry2"></div>
+        <div class="cherry3"></div>
+        <div class="cherry4"></div>
+        <div class="down"></div>
+      </div>
+      <div class="bounce"><p>HAPPY BIRTHDAY</p></div>
+    </div>
+  </body>
+</html>
